@@ -1,5 +1,5 @@
 <script lang="js">
-import {defineComponent} from "vue";
+import {defineComponent, ref} from "vue";
 //Recibimos props desde el elemento padre
 export default defineComponent({
   name: 'PostDetail',
@@ -13,6 +13,17 @@ export default defineComponent({
       required: false,
       default: 'Texto sin contenido'
     }
+  },
+  emits:["sayHi"],
+  setup(props,{emit}){
+    const handleClick = ()=>{
+      //Se establece la comunicacion cntre el componente padre e hijo
+      emit("sayHi",message.value)
+      message.value = ""
+    }
+    // Recibimos valor de input message
+    let message = ref("")
+    return{props,message,handleClick}
   }
 })
 </script>
@@ -21,6 +32,8 @@ export default defineComponent({
   <div class="post">
     <h3>{{ title }}</h3>
     <p>{{ content }}</p>
+    <input type="text" v-model="message" />
+    <button @click="handleClick">Di hola!</button>
   </div>
 </template>
 
