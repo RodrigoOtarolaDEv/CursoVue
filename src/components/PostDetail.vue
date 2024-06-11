@@ -1,31 +1,28 @@
-<script lang="js">
-import {defineComponent, ref} from "vue";
+<script lang="js" setup>
+import { defineProps, defineEmits, ref } from 'vue'
+
+// Recibimos valor de input message
+let message = ref("")
+
 //Recibimos props desde el elemento padre
-export default defineComponent({
-  name: 'PostDetail',
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    content: {
-      type: String,
-      required: false,
-      default: 'Texto sin contenido'
-    }
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
   },
-  emits:["sayHi"],
-  setup(props,{emit}){
-    const handleClick = ()=>{
-      //Se establece la comunicacion cntre el componente padre e hijo
-      emit("sayHi",message.value)
-      message.value = ""
-    }
-    // Recibimos valor de input message
-    let message = ref("")
-    return{props,message,handleClick}
+  content: {
+    type: String,
+    required: false,
+    default: 'Texto sin contenido'
   }
 })
+// Recibimos el emit desde el elemento padre
+const emit = defineEmits(["sayHi"])
+const handleClick = ()=>{
+  //Se establece la comunicacion cntre el componente padre e hijo
+  emit("sayHi",message.value),
+  message.value = ""
+}
 </script>
 
 <template>
