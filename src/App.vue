@@ -3,14 +3,11 @@
 <!--  <CounterComposition />-->
 <!--  <h1 >Listado de Post</h1>-->
 <!--  <PostContainer />-->
-
 <!--  <ExampleSelective />-->
-
 <!--  <ExampleFor />-->
-
 <!--  <ClassBind />-->
-
-  <ModelForm />
+<!--  <ModelForm />-->
+  <PostList />
 
 </template>
 
@@ -22,7 +19,8 @@
 // import ExampleSelective from "@/components/ExampleSelective.vue";
 // import ExampleFor from "@/components/ExampleFor.vue";
 // import ClassBind from "@/components/ClassBind.vue";
-import ModelForm from "@/components/ModelForm.vue";
+// import ModelForm from "@/components/ModelForm.vue";
+import PostList from "@/components/PostList.vue";
 </script>
 
 <style>
