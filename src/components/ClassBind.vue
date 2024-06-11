@@ -1,18 +1,20 @@
 <template>
-  <p v-bind:class="{
-    // primero va la clase y despues la condicion
-    'danger' : hasError
+  <p v-bind:style="{
+    backgroundColor : 'gray',
+    color : c
   }">El mensaje se ha enviado satisfactoriamente</p>
+  <button @click="cambiarColor">Cambiar color</button>
 </template>
 
 <script lang="ts" setup>
-
-let hasError = false
+import {ref} from "vue";
+let c = ref('yellow')
+const cambiarColor= () =>{
+  c.value = 'red'
+}
 
 </script>
 
 <style>
-.danger{
-  color: red;
-}
+
 </style>
