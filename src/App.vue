@@ -7,7 +7,8 @@
 <!--  <ExampleFor />-->
 <!--  <ClassBind />-->
 <!--  <ModelForm />-->
-  <PostList />
+<!--  <PostList />-->
+  <ComputedExample />
 
 </template>
 
@@ -20,7 +21,8 @@
 // import ExampleFor from "@/components/ExampleFor.vue";
 // import ClassBind from "@/components/ClassBind.vue";
 // import ModelForm from "@/components/ModelForm.vue";
-import PostList from "@/components/PostList.vue";
+// import PostList from "@/components/PostList.vue";
+import ComputedExample from "@/components/ComputedExample.vue";
 </script>
 
 <style>
