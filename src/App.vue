@@ -8,7 +8,8 @@
 <!--  <ClassBind />-->
 <!--  <ModelForm />-->
 <!--  <PostList />-->
-  <ComputedExample />
+<!--  <ComputedExample />-->
+  <FacturasExample />
 
 </template>
 
@@ -22,7 +23,8 @@
 // import ClassBind from "@/components/ClassBind.vue";
 // import ModelForm from "@/components/ModelForm.vue";
 // import PostList from "@/components/PostList.vue";
-import ComputedExample from "@/components/ComputedExample.vue";
+// import ComputedExample from "@/components/ComputedExample.vue";
+import FacturasExample from "@/components/FacturasExample.vue";
 </script>
 
 <style>
