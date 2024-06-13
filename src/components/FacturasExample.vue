@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <label for="" v-font-size >Subtotal</label>
+      <label for="" v-custom-size="40">Subtotal</label>
       <input type="number" name="" id="" v-model="subtotal">
     </div>
     <div>

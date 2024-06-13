@@ -15,4 +15,11 @@ app.directive('font-size',{
     }
 })
 
+// el binding.value se le puede asignar desde el component
+app.directive('custom-size',{
+    beforeMount: (el,binding)=>{
+        el.style.fontSize = binding.value + "px"
+    }
+})
+
 app.mount('#app')
