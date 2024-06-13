@@ -1,12 +1,12 @@
 <template>
   <div>
     <div>
-      <label for="" v-custom-size="40">Subtotal</label>
+      <label for="" v-custom-size:sm>Subtotal</label>
       <input type="number" name="" id="" v-model="subtotal">
     </div>
     <div>
-      <p v-if="calculoIva>0" for="">Valor impuesto: {{calculoIva}} ( {{ivaPorcentaje}})</p>
-      <p v-if="total>0">Valor total: {{total}}</p>
+      <p v-if="calculoIva>0" for="" v-custom-size:md>Valor impuesto: {{calculoIva}} ( {{ivaPorcentaje}})</p>
+      <p v-if="total>0" v-custom-size:lg>Valor total: {{total}}</p>
     </div>
   </div>
 </template>
