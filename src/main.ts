@@ -15,12 +15,13 @@ app.directive('font-size', {
     }
 })
 
-// Directiva con value: el binding.value se le puede asignar desde el component
+// Directiva con value y argumentos: el binding.value se le puede asignar desde el component
 app.directive('custom-size', {
     beforeMount: (el, binding) => {
         // el.style.fontSize = binding.value + "px"
         let size = 18
         // arg, en componente se ocupa los : ejemplo v-bind:style
+
         switch (binding.arg) {
             case 'sm':
                 size = 10
@@ -39,6 +40,30 @@ app.directive('custom-size', {
                 break
         }
         el.style.fontSize = size + 'px'
+    }
+})
+// Directiva con modificadores: el binding.value se le puede asignar desde el component
+app.directive('custom-font', {
+    beforeMount: (el, binding) => {
+        let size = 18
+        //modificadores
+        if(binding.modifiers.sm){
+            size = 10
+        }else if (binding.modifiers.md){
+            size = 25
+        }else if(binding.modifiers.lg){
+            size = 72
+        }
+
+        el.style.fontSize = size + 'px'
+
+        if(binding.modifiers.red){
+            el.sytle.color = '#ff0000'
+        }else if(binding.modifiers.green){
+            el.style.color = '#00ff00'
+        }else if(binding.modifiers.blue){
+            el.style.color = '#0000ff'
+        }
     }
 })
 
